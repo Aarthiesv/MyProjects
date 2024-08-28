@@ -1,0 +1,120 @@
+.brands-container {
+  width: 100%;
+  height: 100vh;
+  /* max-height: 80vh; */
+  padding: 20px;
+  background-color: #f4f4f5;
+}
+.brands-wrapper {
+  width: 100%;
+  height: 15vh;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+.brands-wrapper > span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+.brands-wrapper > p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #999999;
+}
+.clicking {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 10%;
+  padding-top: 2%;
+  cursor: pointer;
+}
+.brand-content {
+  background-color: white;
+  width: 100%;
+  display: grid;
+  padding: 50px 60px;
+  margin-top: 5px;
+  grid-template-columns: repeat(4, 3fr);
+  gap: 2%;
+}
+
+.clickings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 15%;
+  padding-top: 2%;
+  cursor: pointer;
+}
+
+.brand-content1 {
+  width: 100%;
+  /* justify-content: space-between; */
+  /* display: grid; */
+  padding: 20px 10px;
+  margin-top: 5px;
+  /* grid-template-columns: repeat(4, 3fr); */
+  /* gap: 2%; */
+}
+.categories-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.categories-container > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.categories-left {
+  width: 25vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10px;
+  background-color: white;
+}
+.categories-left > p {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 20px 0px;
+  border-bottom: 1px solid #f4f4f5;
+}
+.categories-left > span {
+  padding: 15px 0px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+}
+
+.categories-right {
+  background-color: white;
+  margin-left: 1%;
+  width: 71.5vw;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+.categories-right > .ccc {
+  margin-left: 1%;
+  width: 71.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.center {
+  margin-top: 4%;
+}
+
+.categories-women  {
+  background-color: white;
+  width: 100%;
+  display: grid;
+  padding: 20px 20px;
+  grid-template-columns: repeat(4, 4fr);
+  gap: 10%;
+}
