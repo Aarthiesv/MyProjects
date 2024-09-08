@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 
 const Categories_list = ({ onCategorySelect,  brandsWrapperContent,
  }) => {
-  const [selectedId, setSelectedId] = useState(null);
+  const [selectedId, setSelectedId] = useState(1);
   const [sectionTitle, setSectionTitle] = useState("WOMEN");
 
   const navigate = useNavigate();

@@ -768,67 +768,130 @@ export const WomenPageList = [
     id: 3,
     name: "Silk - Cotton",
   },
-  {
-    id: 4,
-    name: "Linen Sarees",
-  },
-  {
-    id: 5,
-    name: "T- Shirts",
-  },
-  {
-    id: 6,
-    name: "Kurtis",
-  },
-  {
-    id: 7,
-    name: "Chudi",
-  },
-  {
-    id: 8,
-    name: "Salwar Suits",
-  },
-  {
-    id: 9,
-    name: "Wersten Tops",
-  },
-  {
-    id: 10,
-    name: "Salwar Suits",
-  },
-  {
-    id: 11,
-    name: "Leggings",
-  },
-  {
-    id: 12,
-    name: "Boxers",
-  },
-  {
-    id: 13,
-    name: "Aari Blouse",
-  },
-  {
-    id: 14,
-    name: "Nighties",
-  },
+  //   {
+  //     id: 4,
+  //     name: "Linen Sarees",
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "T- Shirts",
+  //   },
+  //   {
+  //     id: 6,
+  //     name: "Kurtis",
+  //   },
+  //   {
+  //     id: 7,
+  //     name: "Chudi",
+  //   },
+  //   {
+  //     id: 8,
+  //     name: "Salwar Suits",
+  //   },
+  //   {
+  //     id: 9,
+  //     name: "Wersten Tops",
+  //   },
+  //   {
+  //     id: 10,
+  //     name: "Salwar Suits",
+  //   },
+  //   {
+  //     id: 11,
+  //     name: "Leggings",
+  //   },
+  //   {
+  //     id: 12,
+  //     name: "Boxers",
+  //   },
+  //   {
+  //     id: 13,
+  //     name: "Aari Blouse",
+  //   },
+  //   {
+  //     id: 14,
+  //     name: "Nighties",
+  //   },
 ];
 
 export const CottonSareeList = [
   {
     id: 1,
     icon: images?.ProductSareeIcon1,
+    name: "Shivsai Collections ke stunning designs ab aapke",
+    price: "₹998.00",
+    type: "Free delivery",
+    Rating: "3.5",
+    content: "supplier",
   },
-  // {
-  //   id: 2,
-  //   icon: images?.ProductSareeIcon2,
-  // },
-  // {
-  //   id: 3,
-  //   icon: images?.ProductSareeIcon3,
-  // },
-  // {
-  //   id: 4,
-  //   icon: images?.ProductSareeIcon4,
-  // },
+  {
+    id: 2,
+    icon: images?.ProductSareeIcon2,
+    name: "Shivsai Collections ke stunning designs ab aapke",
+    price: "₹998.00",
+    type: "Free delivery",
+    Rating: "3.5",
+    content: "supplier",
+  },
+  {
+    id: 3,
+    icon: images?.ProductSareeIcon3,
+    name: "Shivsai Collections ke stunning designs ab aapke",
+    price: "₹998.00",
+    type: "Free delivery",
+    Rating: "3.5",
+    content: "supplier",
+  },
+  {
+    id: 4,
+    icon: images?.ProductSareeIcon4,
+    name: "Shivsai Collections ke stunning designs ab aapke",
+    price: "₹998.00",
+    type: "Free delivery",
+    Rating: "3.5",
+    content: "supplier",
+  },
+];
+
+export const SizeList = [
+  {
+    id: 1,
+    size: "9years",
+  },
+  {
+    id: 2,
+    size: "6 years",
+  },
+];
+
+export const ratingList = [
+  {
+    id: 1,
+    name: "3.5",
+    content: "200 Rating",
+  },
+  {
+    id: 2,
+    name: "125",
+    content: "Followers",
+  },
+  {
+    id: 3,
+    name: "85",
+    content: "Products",
+  },
+];
+export const CareList = [
+  {
+    id: 1,
+    name: "Saree fabric: silk blend",
+  },
+  {
+    id: 2,
+    name: "Blouse fabric: silk blend",
+  },
+  {
+    id: 3,
+    name: "Dry-clean",
+  },
 ];

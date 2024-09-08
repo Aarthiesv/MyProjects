@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import "../product/product.css";
 import {
   CottonSareeList,
@@ -21,8 +21,9 @@ const Breadcrumb = ({ category }) => (
 
 const Product = () => {
   const { itemName } = useParams();
-  const [selectedId, setSelectedId] = useState(null);
-  const [showCottonSareeDetails, setShowCottonSareeDetails] = useState(false); // State to toggle <p> display
+  const cottonSareeCategoryId = 1;
+  const [selectedId, setSelectedId] = useState(cottonSareeCategoryId);
+  const [showCottonSareeDetails, setShowCottonSareeDetails] = useState(false);
   const [value, setValue] = useState(1);
 
   const onChange = (e) => {
@@ -40,6 +41,11 @@ const Product = () => {
     if (name === "cotton saree") {
       setShowCottonSareeDetails(e.target.checked);
     }
+  };
+  const navigate = useNavigate();
+
+  const handleItemClick = (itemName) => {
+    navigate(`/addCart/${itemName}`);
   };
 
   return (
@@ -114,19 +120,30 @@ const Product = () => {
               ))}
             </div>
 
-            {/* Conditional Rendering for WomenList */}
-
             <div className="categories-right">
               {showCottonSareeDetails && (
                 <div style={{}}>
                   <div className="categories-right1">
-                    <div className="categories-women">
+                    <div className="categories-women1">
                       {CottonSareeList?.map((item) => (
                         <div className="flex flex-col" key={item.id}>
                           <div className=" relative product-card-detail">
-                            <div className="">
+                            <div
+                              className=""
+                              onClick={() => handleItemClick(item?.name)}
+                            >
                               <img src={item.icon} alt="" />
-                              <p className="">fjhgjhgj</p> 
+                            </div>
+                            <div className="sub-content">
+                              <p className="ellipsis-test">{item?.name}</p>
+                              <div className="price">
+                                <span>{item?.price}</span>
+                                <span>{item?.type}</span>
+                              </div>
+                              <div className="rating">
+                                <span>{item?.Rating}</span>
+                                <span>{item?.content}</span>
+                              </div>
                             </div>
                           </div>
 

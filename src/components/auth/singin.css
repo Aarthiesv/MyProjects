@@ -1,0 +1,54 @@
+.sign-in-container {
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sign-in-wrapper {
+  width: 50%;
+  border: 1px solid green;
+}
+.sign-in-wrapper > img {
+  margin: auto;
+}
+
+.sign-in-wrapper1 {
+  width: 50%;
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+.sign-in-wrapper1 > div > img {
+  width: 50%;
+}
+.sign-in-wrapper1 > div > p {
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+}
+.mail-input > input {
+  background-color: #f4f4f5;
+  border: 1px solid #f4f4f5;
+  border-radius: 10px;
+  width: 25vw;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #999999;
+  outline: none;
+}
+.button-click {
+  width: 40%;
+  margin: 5vw 10vw;
+  background-color: #072255;
+  color: white;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 10px;
+}

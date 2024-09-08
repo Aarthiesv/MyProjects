@@ -2,6 +2,7 @@
   background-color: #072255;
   width: 100%;
   height: 10vh;
+  /* position: fixed; */
 }
 .nav-wrapper {
   display: flex;

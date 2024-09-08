@@ -122,13 +122,23 @@
   grid-template-columns: repeat(4, 4fr);
   gap: 10%;
 }
+.categories-women1 {
+  background-color: white;
+  width: 100%;
+  display: grid;
+  /* padding: 20px 20px; */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1%;
+}
 .product-card-detail {
   border: 1px solid #f4f4f5;
   width: 20vw;
   height: auto;
-  min-height: 70vh;
+  min-height: 53vh;
   position: relative;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 .product-card-detail > div > img {
   position: absolute;
@@ -136,12 +146,45 @@
   left: 10%;
 }
 
-.ellipsis-text {
+.product-card-detail .sub-content {
+  position: absolute;
+  top: 60%;
+  padding: 10px 10px;
+  color: #999999;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.product-card-detail .sub-content .rating {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+}
+.price {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.price > span:nth-child(1) {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+}
+.rating > span {
+  padding: 10px;
+}
+.rating > span:nth-child(1) {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #f4f4f5;
+  /* padding: 5px; */
+}
+.ellipsis-test {
   white-space: nowrap;
-  width: 9vw;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 0.9vw;
-  font-weight: 600;
-  color: var(--textBlack);
+  max-width: 200px;
 }
+
