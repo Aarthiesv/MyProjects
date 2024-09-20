@@ -116,7 +116,15 @@ const Gadgets = ({ listType }) => {
           <div className="carousel-image">
             {commonScrollList?.map((data, index) => (
               <div key={index} className="carousel-item1">
-                <img src={data.icon} alt="Feature" />
+                <img
+                  src={data.icon}
+                  alt="Feature"
+                  className=""
+                  style={{
+                    width: "15vw",
+                    height: "30vh",
+                  }}
+                />
                 <p className="gadgets-item">{data?.name}</p>
               </div>
             ))}

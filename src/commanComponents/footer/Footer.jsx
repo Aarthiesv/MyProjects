@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
 // } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { images } from "../../assets/images";
+import { icons } from "antd/es/image/PreviewGroup";
 const Footer = () => {
   const currentyear = new Date().getFullYear();
 
@@ -39,7 +40,7 @@ const Footer = () => {
             }}
           >
             <img
-              src={images?.mainLogo}
+              src={icons?.MainLogo}
               alt="logo"
               className=""
               style={{ width: "100px", height: "50px" }}
@@ -174,7 +175,7 @@ const Footer = () => {
               </div>
             </ul>
             <ul className=" ">
-              <p className="" style={{ fontSize: "18px", fontWeight: "500" }}>
+              <p className="" style={{ fontSize: "18px", fontWeight: "500",marginLeft:'8vw' }}>
                 Stay Connected
               </p>
               <p

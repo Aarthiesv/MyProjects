@@ -18,11 +18,16 @@ const Feature = () => {
       <p className="xx">Featured Categories</p>
       <div className="carousel-wrapper">
         <div className="carousel" ref={carouselRef}>
-          <div className="carousel-images">
-            {FeatureList.map((data, index) => (
-              <div key={index} className="carousel-item">
-                <img src={data.icon} alt="Feature" />
-                <p className="aa">{data?.name}</p>
+          <div className="carousel-images1">
+            {FeatureList?.map((data, index) => (
+              <div key={index} className="carousel-item1">
+                <img
+                  src={data.icon}
+                  alt="Feature"
+                  className=""
+                  style={{ width: "50%" }}
+                />
+                <p className="aaa">{data?.name}</p>
               </div>
             ))}
           </div>

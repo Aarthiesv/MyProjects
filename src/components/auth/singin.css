@@ -1,6 +1,5 @@
 .sign-in-container {
   width: 100%;
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -8,7 +7,6 @@
 
 .sign-in-wrapper {
   width: 50%;
-  border: 1px solid green;
 }
 .sign-in-wrapper > img {
   margin: auto;
@@ -16,7 +14,6 @@
 
 .sign-in-wrapper1 {
   width: 50%;
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +40,7 @@
 }
 .button-click {
   width: 40%;
-  margin: 5vw 10vw;
+  /* margin: 5vw 10vw 0vw 10vw; */
   background-color: #072255;
   color: white;
   padding: 10px;
@@ -51,4 +48,15 @@
   align-items: center;
   display: flex;
   border-radius: 10px;
+}
+
+.centered-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: lightblue;
+  border: 1px solid #000;
+  text-align: center;
 }

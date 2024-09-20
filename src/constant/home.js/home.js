@@ -134,10 +134,10 @@ export const List = [
     id: 3,
     icon: images?.ThirdIcon,
   },
-  //   {
-  //     id: 4,
-  //     icon: images?.FourthIcon,
-  //   },
+  {
+    id: 4,
+    icon: images?.FourthIcon,
+  },
   {
     id: 5,
     icon: images?.FifthIcon,
@@ -146,10 +146,14 @@ export const List = [
     id: 6,
     icon: images?.SixthIcon,
   },
-  //   {
-  //     id: 7,
-  //     icon: images?.seventhIcon,
-  //   },
+  {
+    id: 7,
+    icon: images?.seventhIcon,
+  },
+  {
+    id: 8,
+    icon: images?.EightIcon,
+  },
 ];
 
 export const ChildrenList = [

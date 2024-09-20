@@ -1,5 +1,5 @@
 // src/App.js
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -23,7 +23,7 @@ const AppLayout = () => {
 
   return (
     <>
-      {!hideHeaderAndNav && <FirstHeader />}
+      {/* {!hideHeaderAndNav && <FirstHeader />}
       {!hideHeaderAndNav && <Nav />}
 
       <Routes>
@@ -34,17 +34,36 @@ const AppLayout = () => {
         <Route path="/addCart/:itemName" element={<AddCartList />} />
         <Route path="/sign-in" element={<Sign_in />} />
         <Route path="/login" element={<LoginIn />} />
-      </Routes>
+      </Routes> */}
     </>
   );
 };
 
 const App = () => {
-  return (
-    <Router>
-      <AppLayout />
-    </Router>
-  );
+  // return (
+  // <Router>
+  //   <AppLayout />
+  // </Router>
+
+  // );
+
+  const getUser = () => {
+    fetch("/api/user")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((json) => console.log(json))
+      .catch((error) =>
+        console.error("There was a problem with the fetch:", error)
+      );
+  };
+
+  useEffect(() => {
+    getUser();
+  }, []);
 };
 
 export default App;

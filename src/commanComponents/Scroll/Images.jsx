@@ -30,8 +30,8 @@ const Images = ({ listType }) => {
         <div className="carousel" ref={carouselRef}>
           <div className="carousel-images">
             {listToShow.map((data, index) => (
-              <div key={index} className="carousel-item">
-                <img src={data.icon} alt="Feature" />
+              <div key={index} className="carousel-item1">
+                <img src={data.icon} alt="Feature" className="trending" />
                 <p className="aa">{data?.name}</p>
               </div>
             ))}

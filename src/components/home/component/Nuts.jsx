@@ -11,7 +11,12 @@ const Nuts = () => {
       <div className="nuts-container">
         <div className="nuts-main-container">
           {NutsList?.map((data) => (
-            <img src={data?.icon} alt="zz" />
+            <img
+              src={data?.icon}
+              alt="zz"
+              className=""
+              style={{ width: "49vw" }}
+            />
           ))}
         </div>
         <Gadgets listType="nuts" />

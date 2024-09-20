@@ -46,15 +46,20 @@
 
 .carousel-images {
   display: flex;
-  gap: 6%;
+  /* gap: 6%; */
 }
 
 .carousel-item {
-  flex: 0 0 auto;
+  /* flex: 0 0 auto; */
   /* width: 200px; */
   margin-right: 10px;
   display: flex;
   position: relative;
+}
+
+.trending {
+  width: 70%;
+  height: 89%;
 }
 .aa {
   width: 100%;
@@ -104,7 +109,7 @@
 
 .carousel-image {
   display: flex;
-  gap: 5%;
+  /* gap: 5%; */
 }
 
 .carousel-item1 {
@@ -115,6 +120,7 @@
   flex-direction: column;
 }
 .gadgets-item {
+  margin-right: 15vw;
   margin-top: 20px;
   font-size: 18px;
   font-weight: 400;

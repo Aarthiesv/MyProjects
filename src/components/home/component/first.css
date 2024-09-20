@@ -146,9 +146,10 @@ feature .feature-container {
   scroll-behavior: smooth;
 }
 
-.carousel-images {
+.carousel-images1 {
+  width: 100%;
   display: flex;
-  gap: 6%;
+  padding: 0px 50px;
 }
 
 .carousel-item {
@@ -158,8 +159,15 @@ feature .feature-container {
   display: flex;
   position: relative;
 }
-.aa {
-  width: 100%;
+.carousel-item1 {
+  width: 30vw;
+  margin-right: 10px;
+  display: flex;
+  position: relative;
+}
+
+.aaa {
+  width: 50%;
   position: absolute;
   bottom: -1.5%;
   background-color: #ffffffe5;
@@ -327,6 +335,11 @@ feature .feature-container {
   justify-content: space-evenly;
   right: 1%;
   top: 5%;
+}
+
+.mm > img {
+  width: 20vw;
+  height: 50vh;
 }
 
 /* //children */

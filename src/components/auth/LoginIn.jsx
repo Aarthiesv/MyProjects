@@ -33,19 +33,29 @@ const LogIn = () => {
           <p>Welcome Back!</p>
         </div>
         <form onSubmit={handleSubmit}>
-          <div className="mail-input" style={{ marginTop: "10vw" }}>
+          <div className="mail-input" style={{ marginTop: "3vw" }}>
             <input
+              placeholder="Enter your Password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
-          <Link to={"/"}>
+          <div
+            className=""
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: "3vw",
+            }}
+          >
             <button type="submit" className="button-click">
               Continue
             </button>
-          </Link>
+          </div>
         </form>
       </div>
     </div>

@@ -1,5 +1,9 @@
-import ExploreSareeIcon from "../icons/Vector (1).svg";
-import SareeIcon from "../images/Saree.svg";
+// import ExploreSareeIcon from "../icons/Vector (1).svg";
+// import SareeIcon from "../images/Saree.svg";
+
+import ArrowDownIcon from "../icons/arrow-down.svg";
+import shopIcon from "../icons/shop.svg";
+import ElementIcon from "../icons/element.svg";
 
 import AddCard1 from "../icons/Add1.png";
 import AddCard2 from "../icons/Add2.png";
@@ -17,12 +21,14 @@ import Icon from "../icons/icon.png";
 
 import LogInImage from "../icons/login.svg";
 import LogInImage1 from "../icons/login2.svg";
+import MainLogo from "../icons/mainLogo.png";
 
 export const icons = {
   //Explore
 
-  ExploreSareeIcon: ExploreSareeIcon,
-  SareeIcon: SareeIcon,
+  ArrowDownIcon: ArrowDownIcon,
+  shopIcon: shopIcon,
+  ElementIcon: ElementIcon,
 
   AddCard1: AddCard1,
   AddCard2: AddCard2,
@@ -41,4 +47,6 @@ export const icons = {
 
   LogInImage: LogInImage,
   LogInImage1: LogInImage1,
+
+  MainLogo: MainLogo,
 };

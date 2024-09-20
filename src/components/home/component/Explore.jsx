@@ -3,7 +3,6 @@ import { images } from "../../../assets/images";
 import { TrendsList } from "../../../constant/home.js/home";
 
 import "../../home/component/first.css";
-import { icons } from "../../../assets/icons";
 
 const Explore = () => {
   return (
@@ -22,7 +21,7 @@ const Explore = () => {
       </div>
       <div className="left-side">
         <div>
-          <img src={icons?.ExploreSareeIcon} alt="" />
+          <img src={images?.ExploreSareeIcon} alt="" />
           <span>FABROOM</span>
         </div>
 

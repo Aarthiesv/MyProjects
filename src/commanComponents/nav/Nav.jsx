@@ -11,6 +11,7 @@ import {
 } from "../../constant/nav/Nav";
 import { ClothList, KidsList } from "../../constant/nav/Nav";
 import { Link, useNavigate } from "react-router-dom";
+import { icons } from "../../assets/icons";
 
 const Nav = () => {
   const [selectedItem, setSelectedItem] = useState(false);
@@ -45,7 +46,7 @@ const Nav = () => {
             onClick={() => handleNavBarClick(item)}
           >
             <p>{item.name}</p>
-            <img src={images?.DownIcon} alt="down icon" />
+            <img src={icons?.ArrowDownIcon} alt="down icon" />
           </div>
         ))}
         <div
@@ -57,7 +58,7 @@ const Nav = () => {
           }}
         >
           <img
-            src={images?.shopIcon}
+            src={icons?.shopIcon}
             alt="shop-icon"
             className=""
             style={{
@@ -73,7 +74,7 @@ const Nav = () => {
             </p>
           </Link>
           <div className="all-categories">
-            <img src={images?.ElementIcon} alt="" />
+            <img src={icons?.ElementIcon} alt="" />
             <Link to={"/Categories"}>
               <p className="">All Categories</p>
             </Link>
