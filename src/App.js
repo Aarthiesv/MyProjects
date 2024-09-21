@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -40,6 +40,7 @@ const AppLayout = () => {
 };
 
 const App = () => {
+  const [user, setUser] = useState([]);
   // return (
   // <Router>
   //   <AppLayout />
@@ -49,21 +50,27 @@ const App = () => {
 
   const getUser = () => {
     fetch("/api/user")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return res.json();
-      })
-      .then((json) => console.log(json))
-      .catch((error) =>
-        console.error("There was a problem with the fetch:", error)
-      );
+      .then((res) => res.json())
+      .then((json) => setUser(json));
   };
 
   useEffect(() => {
     getUser();
   }, []);
+
+  // console.log(user[0].address?.geo?.lat);
+  // console.log(user[0].company?.catchPhrase);
+  // console.log(user[0].company?.name);
+  return (
+    <div>
+      {user?.map((data) => (
+        <>
+          <p>{data?.name}</p>
+          <p>{data?.username}</p>
+        </>
+      ))}
+    </div>
+  );
 };
 
 export default App;
