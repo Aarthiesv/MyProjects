@@ -48,27 +48,45 @@ const App = () => {
 
   // );
 
-  const getUser = () => {
-    fetch("/api/user")
-      .then((res) => res.json())
-      .then((json) => setUser(json));
-  };
+  // const getUser = () => {
+  //   fetch("/api/user")
+  //     .then((res) => res.json())
+  //     .then((json) => setUser(json));
+  // };
 
-  useEffect(() => {
-    getUser();
-  }, []);
+  // useEffect(() => {
+  //   getUser();
+  // }, []);
 
   // console.log(user[0].address?.geo?.lat);
   // console.log(user[0].company?.catchPhrase);
   // console.log(user[0].company?.name);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:3000");
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const result = await response.json();
+        console.log(result);
+      } catch (err) {
+        console.error("Fetch error:", err);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div>
-      {user?.map((data) => (
+      {/* {user?.map((data) => (
         <>
           <p>{data?.name}</p>
           <p>{data?.username}</p>
         </>
-      ))}
+      ))} */}
     </div>
   );
 };
