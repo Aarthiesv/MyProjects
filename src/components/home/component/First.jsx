@@ -33,6 +33,7 @@ const First = () => {
         src={imageList[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}
         className="carousel-image"
+        style={{width:'100%'}}
       />
 
       <div className="carousel-dots">

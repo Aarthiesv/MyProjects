@@ -28,11 +28,16 @@ const Beauty = () => {
       <p>Beauty & Cosmetics</p>
       <div className="beauty-wrapper">
         <div className="left-container">
-          <img src={images?.BeautyIcon1} alt="" />
+          <img
+            src={images?.BeautyIcon1}
+            alt=""
+            className=""
+            style={{ width: "100%" }}
+          />
         </div>
         <div className="right-container">
           {BeautyProductList?.map((item) => (
-            <img src={item?.icon} />
+            <img src={item?.icon} className="" style={{ width: "100%" }} />
           ))}
         </div>
       </div>

@@ -19,14 +19,17 @@ const Footer = () => {
   const currentyear = new Date().getFullYear();
 
   return (
-    <footer className=" bg-[#072255]  font-normal text-[#FFFFFF]  md:h-auto ">
+    <footer
+      className="  font-normal  md:h-auto "
+      style={{ backgroundColor: "#072255", color: "#FFFFFF", margin: "auto" }}
+    >
       <div
         class="m-auto max-w-[90%]     "
         style={{
           width: "100%",
           display: "flex",
           flexDirection: "row",
-          padding: "3% 0",
+          // padding: "3% 0px",
         }}
       >
         <div className="  w-[100%] md:flex-col md:gap-16 lg:flex">
@@ -37,6 +40,7 @@ const Footer = () => {
               width: "50%",
               display: "flex",
               flexDirection: "column",
+              padding: "10px 10px",
             }}
           >
             <img
@@ -48,7 +52,10 @@ const Footer = () => {
 
             <p
               className=" flex w-[300px] "
-              style={{ textAlign: "start", fontSize: "14px" }}
+              style={{
+                textAlign: "start",
+                fontSize: "14px",
+              }}
             >
               Fabmerce is a social commerce marketplace for all your shopping
               needs. Experience the new era of social shopping with us.
@@ -97,7 +104,7 @@ const Footer = () => {
             <ul
               className="  "
               style={{
-                width: "35vw",
+                width: "10vw",
                 textAlign: "start",
               }}
             >
@@ -174,15 +181,22 @@ const Footer = () => {
                 <li>help@fabmerce.com</li>
               </div>
             </ul>
-            <ul className=" ">
-              <p className="" style={{ fontSize: "18px", fontWeight: "500",marginLeft:'8vw' }}>
+            <ul className="">
+              <p
+                className=""
+                style={{
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  // marginLeft: "8vw",
+                }}
+              >
                 Stay Connected
               </p>
               <p
                 className="sss"
                 style={{
                   width: "70%",
-                  marginLeft: " 30%",
+                  // marginLeft: " 30%",
                   textAlign: "start",
                   fontSize: "14px",
                   padding: "10px 0px",

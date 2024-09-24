@@ -1,31 +1,41 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Modal } from "antd";
-
+import { Modal, message } from "antd"; // Import message for notifications
 import "../auth/singin.css";
 import { icons } from "../../assets/icons";
 import { images } from "../../assets/images";
-import LogIn from "./LoginIn"; // Assuming this is a form inside the modal
+import LogIn from "./LoginIn";
+import axios from "axios";
 
 const Sign_in = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [emailError, setEmailError] = useState("");
 
-  const navigate = useNavigate(); // Hook to navigate to different routes
-
-  const handleContinueClick = () => {
-    setIsModalVisible(true); // Show the modal when clicking "Continue"
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
   };
 
-  const handleModalSubmit = () => {
-    // Handle any actions in the modal and navigate to login
-    setIsModalVisible(false); // Close the modal
-    navigate("/login"); // Navigate to login page
+  const handleContinueClick = (e) => {
+    e.preventDefault();
+
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address."); // Set error message
+      return;
+    }
+    setEmailError("");
+
+    setIsModalVisible(true);
+    axios
+      .post("http://localhost:3001/Login", { email })
+      .then((result) => console.log(result))
+      .catch((err) => console.log(err));
+
+    setEmail("");
   };
 
   const handleCancel = () => {
-    setIsModalVisible(false); // Close the modal without navigation
+    setIsModalVisible(false);
   };
 
   return (
@@ -47,6 +57,11 @@ const Sign_in = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
+            {emailError && (
+              <p className="error-message" style={{ color: "red" }}>
+                {emailError}
+              </p>
+            )}{" "}
           </div>
           <div
             className=""
@@ -61,11 +76,10 @@ const Sign_in = () => {
             <button
               type="button"
               className="button-click"
-              onClick={handleContinueClick}
+              onClick={(e) => handleContinueClick(e)}
             >
               Continue
             </button>
-
             <Modal
               open={isModalVisible}
               footer={null}

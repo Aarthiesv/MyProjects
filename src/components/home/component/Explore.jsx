@@ -9,7 +9,12 @@ const Explore = () => {
     <div className="main-container">
       <div className="wrapper">
         <p>Explore</p>
-        <img src={images?.ExploreIcon} alt="no-img" />
+        <img
+          src={images?.ExploreIcon}
+          alt="no-img"
+          className=""
+          style={{ width: "100%" }}
+        />
 
         <span>New Trends</span>
 

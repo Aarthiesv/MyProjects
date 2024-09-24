@@ -5,7 +5,12 @@ import { OfferList } from "../../../constant/home.js/home";
 const Offer = () => {
   return (
     <div className="offer-wrapper">
-      <img src={images?.DealBackGroundImage} alt="no-img" />
+      <img
+        src={images?.DealBackGroundImage}
+        alt="no-img"
+        className=""
+        style={{ width: "100%" }}
+      />
       <div className="offer-container">
         <div className="">
           <p>

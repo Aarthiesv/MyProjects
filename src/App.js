@@ -15,32 +15,14 @@ import Product from "./commanComponents/product/Product";
 import AddCartList from "./commanComponents/addCart/AddCartList";
 import Sign_in from "../src/components/auth/Sign_in";
 import LoginIn from "./components/auth/LoginIn";
-const AppLayout = () => {
+
+const App = () => {
+  const [user, setUser] = useState([]);
   const location = useLocation();
 
   const hideHeaderAndNav =
     location.pathname === "/sign-in" || location.pathname === "/login";
 
-  return (
-    <>
-      {/* {!hideHeaderAndNav && <FirstHeader />}
-      {!hideHeaderAndNav && <Nav />}
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/brands" element={<Brands />} />
-        <Route path="/categories" element={<Categories />} />
-        <Route path="/product/:itemName" element={<Product />} />
-        <Route path="/addCart/:itemName" element={<AddCartList />} />
-        <Route path="/sign-in" element={<Sign_in />} />
-        <Route path="/login" element={<LoginIn />} />
-      </Routes> */}
-    </>
-  );
-};
-
-const App = () => {
-  const [user, setUser] = useState([]);
   // return (
   // <Router>
   //   <AppLayout />
@@ -80,14 +62,20 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      {/* {user?.map((data) => (
-        <>
-          <p>{data?.name}</p>
-          <p>{data?.username}</p>
-        </>
-      ))} */}
-    </div>
+    <>
+      {!hideHeaderAndNav && <FirstHeader />}
+      {!hideHeaderAndNav && <Nav />}
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/brands" element={<Brands />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/product/:itemName" element={<Product />} />
+        <Route path="/addCart/:itemName" element={<AddCartList />} />
+        <Route path="/sign-in" element={<Sign_in />} />
+        <Route path="/login" element={<LoginIn />} />
+      </Routes>
+    </>
   );
 };
 

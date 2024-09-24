@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../auth/singin.css";
 import { icons } from "../../assets/icons";
 import { images } from "../../assets/images";
+import axios from "axios";
 
 const LogIn = () => {
   const [password, setPassword] = useState("");
@@ -12,14 +13,17 @@ const LogIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const mockEmail = "user@example.com";
-    const mockPassword = "password123";
-
-    if (password === mockPassword) {
-      navigate("/");
-    } else {
-      alert("Invalid email or password");
-    }
+    axios
+      .post("http://localhost:3001/Login", { password })
+      .then((result) => {
+        console.log(result);
+        if (result.status === 200) {
+          navigate("/"); 
+        }
+      })
+      .catch((err) => {
+        console.error(err); 
+      });
   };
 
   return (
