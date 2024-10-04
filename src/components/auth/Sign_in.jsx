@@ -6,10 +6,10 @@ import { images } from "../../assets/images";
 import LogIn from "./LoginIn";
 import axios from "axios";
 
-const Sign_in = () => {
+const Sign_in = ({ onCancel, setIsModalVisible }) => {
   const [email, setEmail] = useState("");
-  const [isModalVisible, setIsModalVisible] = useState(false);
   const [emailError, setEmailError] = useState("");
+  const [isLoginModalVisible, setIsLoginModalVisible] = useState(false); // State for login modal
 
   const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -18,24 +18,29 @@ const Sign_in = () => {
 
   const handleContinueClick = (e) => {
     e.preventDefault();
+    setIsModalVisible(false);
 
     if (!validateEmail(email)) {
-      setEmailError("Please enter a valid email address."); // Set error message
+      setEmailError("Please enter a valid email address.");
       return;
     }
     setEmailError("");
 
-    setIsModalVisible(true);
     axios
       .post("http://localhost:3001/Login", { email })
-      .then((result) => console.log(result))
-      .catch((err) => console.log(err));
+      .then((result) => {
+        console.log(result);
+        setIsLoginModalVisible(true);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
 
     setEmail("");
   };
 
   const handleCancel = () => {
-    setIsModalVisible(false);
+    setIsLoginModalVisible(false);
   };
 
   return (
@@ -61,7 +66,7 @@ const Sign_in = () => {
               <p className="error-message" style={{ color: "red" }}>
                 {emailError}
               </p>
-            )}{" "}
+            )}
           </div>
           <div
             className=""
@@ -77,18 +82,23 @@ const Sign_in = () => {
               type="button"
               className="button-click"
               onClick={(e) => handleContinueClick(e)}
+              onCancel={onCancel}
             >
               Continue
             </button>
+
             <Modal
-              open={isModalVisible}
+              open={isLoginModalVisible}
               footer={null}
               closable={false}
               centered={true}
               onCancel={handleCancel}
               width="55%"
             >
-              <LogIn setIsModalVisible={setIsModalVisible} />
+              <LogIn
+                setIsLoginModalVisible={setIsLoginModalVisible}
+                onCancel={handleCancel}
+              />
             </Modal>
           </div>
         </form>

@@ -6,7 +6,7 @@ import { icons } from "../../assets/icons";
 import { images } from "../../assets/images";
 import axios from "axios";
 
-const LogIn = () => {
+const LogIn = ({ onCancel }) => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
@@ -18,11 +18,11 @@ const LogIn = () => {
       .then((result) => {
         console.log(result);
         if (result.status === 200) {
-          navigate("/"); 
+          navigate("/");
         }
       })
       .catch((err) => {
-        console.error(err); 
+        console.error(err);
       });
   };
 
@@ -56,7 +56,7 @@ const LogIn = () => {
               marginTop: "3vw",
             }}
           >
-            <button type="submit" className="button-click">
+            <button type="submit" className="button-click" onClick={onCancel}>
               Continue
             </button>
           </div>

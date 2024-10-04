@@ -38,14 +38,16 @@ const FirstHeader = () => {
         <Modal
           open={isModalVisible}
           footer={null}
-          // className={"campaign-modal"}
           closable={false}
           centered={true}
           onCancel={handleCancel}
           width="55%"
           margin="10%"
         >
-          <Sign_in setIsModalVisible={setIsModalVisible} />
+          <Sign_in
+            setIsModalVisible={setIsModalVisible}
+            onCancel={handleCancel}
+          />
         </Modal>
       </div>
     </div>
@@ -53,6 +55,3 @@ const FirstHeader = () => {
 };
 
 export default FirstHeader;
-
-
-
